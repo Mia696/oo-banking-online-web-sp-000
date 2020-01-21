@@ -18,7 +18,8 @@ def execute_transaction
     @receiver.balance += @amount
     @status = "complete"
   else
- reject_transfer
+   @status = "rejected"
+   return "Transaction rejected. Please check your account balance."
   end
 end
 
@@ -29,12 +30,8 @@ def reverse_transfer
     @status = "reversed"
   end 
  end
- 
- def reject_transfer
-     @status = "rejected"
-   return "Transaction rejected. Please check your account balance."
 end
-end
+
   
   
   
