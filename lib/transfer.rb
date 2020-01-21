@@ -20,7 +20,8 @@ def execute_transaction
     self.status = "complete"
   else
     reject_transfer
-    
+    self.status = "rejected"
+  "Transaction rejected. Please check your account balance."
   end
 end
 
