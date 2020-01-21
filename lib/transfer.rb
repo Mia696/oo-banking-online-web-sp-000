@@ -20,6 +20,7 @@ def execute_transaction
     self.status = "complete"
   else
     reject_transfer
+    
   end
 end
 
