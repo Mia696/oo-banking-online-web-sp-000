@@ -24,15 +24,12 @@ end
 
 def reverse_transfer 
   if @status == "complete"
-    sender.deposit(self.amount)
-    receiver.withdrawl(self.amount)
-    self.status = "reversed"
-  else
-    self.status = "rejected"
-    "Transaction rejected. Please check your account balance."
-  end
+      @sender.balance += @amount
+    @receiver.balance -= @amount
+    @status = "reversed"
+  end 
 end
-
+ 
 def reject_transfer
   self.status = "rejected"
   "Transaction rejected. Please check your account balance."
