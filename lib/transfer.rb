@@ -29,9 +29,9 @@ def reverse_transfer
     receiver.withdrawl(self.amount)
     self.status = "reversed"
   else
-  self.status = "rejected"
-  "Transaction rejected. Please check your account balance."
- end
+    self.status = "rejected"
+    "Transaction rejected. Please check your account balance."
+  end
 end
 
 end
