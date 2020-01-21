@@ -31,11 +31,11 @@ def reverse_transfer
  end
  
  def reject_transfer
-     @status = "rejected"
-   return "Transaction rejected. Please check your account balance."
-end
+     self.status = "rejected"
+    "Transaction rejected. Please check your account balance."
+  end
 end 
-end
+
   
   
   
