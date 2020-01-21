@@ -18,7 +18,7 @@ def execute_transaction
     @receiver.balance += @amount
     @status = "complete"
   else
-   reject_transfer
+    self.status = "rejected"
   end
 end
 
