@@ -15,8 +15,7 @@ end
 
 def execute_transaction
   if valid? && sender.balance > amount && self.status == "pending"
-    sender.balance -= amount
-    receiver.balance += amouunt
+   
     self.status = "complete"
   else
     reject_transfer
